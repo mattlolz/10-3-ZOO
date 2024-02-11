@@ -1,19 +1,14 @@
 import java.awt.*;
 
-// TODO: extend Animal
 public class Cat extends Animal {
 
-    // TODO: add instance variables
+    int x;
+    int y;
 
-    // TODO: add constructor
     public Cat(String name, int x, int y, int hunger, boolean isSick, int age, boolean isAlive, int width, int height){
         super(name, x, y, hunger, isSick, age, isAlive, width, height);
-    }
-    // TODO: override the tick method
-    @Override
-    public void tick()
-    {
-        
+        this.x = x;
+        this.y = y;
     }
 
     @Override
@@ -31,22 +26,26 @@ public class Cat extends Animal {
         //g.drawString("\\_o_/", Zoo.wrap(xPos,Zoo.ZOO_COLS)*Zoo.SCALE, Zoo.wrap(yPos,Zoo.ZOO_ROWS)*Zoo.SCALE+25);
     }
 
-    // TODO: override the eat method
     @Override
     public void eat(Food food)
     {
         
     }
-    // TODO: override the move method
+
     @Override
     public void move(Zoo zoo)
     {
 
     }
+
     @Override
     public void tick(Zoo zoo)
     {
-
+        for(int new_y = y-1; y < 3; y++) {
+            for(int new_x = x-1; x < 3; x++) {
+                
+            }
+        }
     }
 
 

@@ -123,12 +123,14 @@ public class Zoo extends JPanel {
         // TODO: add food and animals to the zoo
 
         // String name, int x, int y, int hunger, boolean isSick, int age, boolean isAlive, int width, int height
-        zoo.add(new Cat("Cat", 20, 20, 0, false, 3, true, 10, 10));
+        zoo.add(new Cat("Cat", 12, 12, 0, false, 3, true, 10, 10));
         zoo.add(new Cat("Cat", 10, 10, 0, false, 3, true, 10, 10));
+        
         int tickCount = 0;
         while(true) {
             try {
                 Thread.sleep(100);
+                System.out.println(tickCount);
             }
             catch(Exception ex) {
                 ex.printStackTrace();
