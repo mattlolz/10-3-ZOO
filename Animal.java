@@ -1,17 +1,29 @@
+import java.awt.*;
+
 public abstract class Animal extends Entity{
 
-    int hunger;
-    boolean isSick;
+    protected int hunger;
+    protected boolean sick;
 
-    public Animal(String name, int x, int y, int hunger, boolean isSick, int age, boolean isAlive, int width, int height)
+    public Animal(String name, int x, int y)
     {
-        super(name, x, y, age, isAlive, width, height);
-        this.hunger = hunger;
-        this.isSick = isSick;
+        super(name, x, y);
+        this.hunger = 0;
     }
+
+    public abstract void draw(Graphics g);
 
     public abstract void eat(Food food);
 
+    public abstract void tick(Zoo zoo);
+
     public abstract void move(Zoo zoo);
     
+    public int getHunger() {
+        return this.hunger;
+    }
+    
+    public boolean isSick(){
+        return this.sick;
+    }
 }
