@@ -197,7 +197,6 @@ public class Zoo extends JPanel {
         frame.add(zoo);
         frame.setVisible(true);
     
-        // TODO: add food and animals to the zoo
         Animal cat = new Cat("Cat", rand.nextInt(ZOO_COLS), rand.nextInt(ZOO_ROWS));
         zoo.add(cat);
     

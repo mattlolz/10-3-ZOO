@@ -12,16 +12,11 @@ public abstract class Entity extends Zoo {
         super(ZOO_ROWS, ZOO_COLS);
         this.x = x;
         this.y = y;
-
-        // TODO: complete the Entity constructor
     }
 
     // ABSTRACT METHODS
-    // tick and draw are called by the Zoo class
 
-    // TODO: add abstract method tick(Zoo z)
     public abstract void tick(Zoo z);
-    // TODO: add abstract method draw(Graphics g)
     public abstract void draw(Graphics g);
 
     public boolean isAlive() {
