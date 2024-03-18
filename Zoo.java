@@ -178,12 +178,6 @@ public class Zoo extends JPanel {
         return adjacentCoordinates;
     }
 
-    //Testing
-    public ArrayList<Entity> getEntitiesAtLocation(int x, int y) {
-        int wrappedX = wrap(x, width);
-        int wrappedY = wrap(y, height);
-        return new ArrayList<>(grid.get(wrappedY).get(wrappedX));
-    }
 
 
     public static void main(String[] args) {
@@ -231,18 +225,7 @@ public class Zoo extends JPanel {
                     zoo.add(new Ham("NotCheese", rand.nextInt(ZOO_COLS), rand.nextInt(ZOO_ROWS)));
                 }
             }
-            /*
-            for (int y = 0; y < zoo.grid.size(); y++) {
-                for (int x = 0; x < zoo.grid.get(y).size(); x++) {
-                    ArrayList<Entity> entitiesAtLocation = zoo.getEntitiesAtLocation(x, y);
-                    for (Entity entity : entitiesAtLocation) {
-                        // Do something with the entity
-                        System.out.println("Entity at location (" + x + ", " + y + "): " + entity.getName());
-                    }
-                }
-            }
 
-             */
             zoo.tick();
     
     
